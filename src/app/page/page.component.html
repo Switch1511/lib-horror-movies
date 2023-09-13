@@ -1,0 +1,46 @@
+<div id="page" class="container">
+  <div class="row title">
+    <div class="col">
+      <h2>Horror Movies List</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>filter</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <p>Nome</p>
+      <input type="text">
+    </div>
+
+    <div class="col-3">
+      <p>Ano</p>
+      <input type="number">
+    </div>
+
+    <div class="col-3">
+      <p>Director</p>
+      <input type="text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-sm-4 col-md-3 col-xl-2" *ngFor="let movie of movies">
+      <div class="box">
+        <div>
+          <img [src]="movie.imgLink">
+        </div>
+        <div>
+          <h5>{{movie.name}}</h5>
+          <div>
+
+          </div>
+          <p>{{movie.id}}</p>
+        </div>
+      </div>
+    </div>
+</div>
