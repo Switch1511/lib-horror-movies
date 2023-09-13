@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { movies } from '../shared/interfaces/movies.interface';
+import { MoviesService } from '../shared/services/movies.service';
 
 @Component({
   selector: 'app-page',
@@ -10,46 +11,16 @@ export class PageComponent implements OnInit {
 
   movies?: movies[];
 
-  constructor() { }
+  constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-    this.movies = [
-      {
-        id: 0,
-        name: 'Filme 0',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-    },
-      {
-        id: 1,
-        name: 'Filme 1',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-      },
-      {
-        id: 2,
-        name: 'Filme 2',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-      },
-      {
-        id: 3,
-        name: 'Filme 3',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-      },
-      {
-        id: 4,
-        name: 'Filme 4',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-      },
-      {
-        id: 5,
-        name: 'Filme 5',
-        imgLink: 'https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583',
-        ano: 2018
-      }
-    ]
+    this.getMovies();
+  }
+
+  getMovies(){
+    this.moviesService.getMovies()
+    .subscribe((data: any) => {
+      this.movies = data
+    });
   }
 }
