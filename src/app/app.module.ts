@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageComponent } from './page/page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    HomePageComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,

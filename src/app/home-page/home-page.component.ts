@@ -3,13 +3,15 @@ import { movies } from '../shared/interfaces/movies.interface';
 import { MoviesService } from '../shared/services/movies.service';
 
 @Component({
-  selector: 'app-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.scss']
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss']
 })
-export class PageComponent implements OnInit {
+export class HomePageComponent implements OnInit {
 
   movies?: movies[];
+
+  movie?: movies[];
 
   constructor(private moviesService: MoviesService) { }
 
@@ -21,6 +23,14 @@ export class PageComponent implements OnInit {
     this.moviesService.getMovies()
     .subscribe((data: any) => {
       this.movies = data
+    });
+  }
+
+  getMovieId(id: number){
+    this.moviesService.getMovieId(id)
+    .subscribe((data: any) => {
+      this.movie = data
+      console.log(this.movie)
     });
   }
 }
