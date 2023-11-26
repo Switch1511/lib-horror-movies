@@ -1,21 +1,30 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
+
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { MoviePageComponent } from './movie-page/movie-page.component';
+
+import { HomePageModule } from './home-page/home-page.module';
+
+import { MoviePageModule } from './movie-page/movie-page.module';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomePageComponent,
-    MoviePageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HomePageModule,
+    MoviePageModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

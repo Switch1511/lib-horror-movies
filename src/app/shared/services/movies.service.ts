@@ -20,4 +20,8 @@ export class MoviesService {
   getMovieId(id: any){
     return this.http.get<any>(this.API_URL + "movies?id=" + id);
   }
+
+  getMoviesByName(name: string){
+    return this.http.get<any>(this.API_URL + "movies?name=" + name);
+  }
 }

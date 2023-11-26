@@ -1,47 +1,50 @@
-<div id="page" class="container">
-  <div class="row title">
-    <div class="col">
-      <h2>Horror Movies List</h2>
-    </div>
+<div id="page" class="container" [@fadeInOut]>
+  <div class="title">
+    <h2>Horror Movies List</h2>
   </div>
 
-  <!-- <div class="row">
-    <div class="col">
-      <p>filter</p>
-    </div>
-  </div>
+  <div class="container-custom">
 
-  <div class="row">
-    <div class="col-6">
-      <p>Nome</p>
-      <input type="text">
-    </div>
-
-    <div class="col-3">
-      <p>Ano</p>
-      <input type="number">
-    </div>
-
-    <div class="col-3">
-      <p>Director</p>
-      <input type="text">
-    </div>
-  </div> -->
-
-  <div class="row">
-    <div class="col-6 col-sm-4 col-md-3 col-xl-2" *ngFor="let movie of movies">
-      <div class="box" (click)="getMovieId(movie.id)">
-        <div>
-          <img [src]="movie.imgLink">
+    <aside>
+      <div style="width: 240px;       display: flex;
+      flex-wrap: wrap;
+      gap: 25px;">
+        <div class="filter-options">
+          <h3>Ordenar</h3>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+              <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+            </svg>
+          </span>
         </div>
-        <div>
-          <h5>{{movie.name}}</h5>
-          <div>
 
-          </div>
-          <p>{{movie.id}}</p>
+        <div class="filter-options">
+          <h3>Filtros</h3>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+              <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+            </svg>
+          </span>
         </div>
       </div>
+    </aside>
+    <div>
+      <section>
+        <div *ngFor="let movie of movies">
+          <div class="box" (click)="routerMovie(movie.id)">
+            <div class="img-box">
+              <img [src]="movie.imgLink">
+            </div>
+            <div>
+              <h5>{{movie.name}}</h5>
+              <p>{{movie.ano}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
   </div>
+
+
 </div>

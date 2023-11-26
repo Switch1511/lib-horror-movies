@@ -1,1 +1,26 @@
-<p>movie-page works!</p>
+<div id="page" class="container">
+  <div class="row title">
+    <div class="col">
+      <h2>Horror Movie</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-sm-4 col-md-3">
+      <div class="box">
+        <div>
+          <img [src]="movie?.imgLink">
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-9">
+      <div>
+        <h5>{{movie?.name}}</h5>
+        <div>
+
+        </div>
+        <p>{{movie?.ano}}</p>
+      </div>
+    </div>
+  </div>
+</div>

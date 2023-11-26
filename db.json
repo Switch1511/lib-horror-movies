@@ -2,21 +2,104 @@
   "movies": [
     {
       "id": 0,
-      "name": "Filme 0",
-      "imgLink": "https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583",
-      "ano": 2018
+      "name": "Pânico VI",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/dbd7DQCHZ57SF4tM2puHtwNxDQD.jpg",
+      "ano": 2023,
+      "sinopse": "Sam, Tara, Chad e Mindy, os quatro sobreviventes do massacre realizado pelo Ghostface, decidem deixar Woodsboro para trás em busca de um novo começo em uma cidade diferente. Mas não demora muito para eles se tornarem alvo de um novo serial killer mascarado.",
+      "characters": ["Kevin Williamson"],
+      "writer": ["James Vanderbilt", "Guy Busick"],
+      "director": ["Tyler Gillett", "Matt Bettinelli-Olpin"]
     },
     {
       "id": 1,
-      "name": "Filme 1",
-      "imgLink": "https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583",
-      "ano": 4324
+      "name": "A Morte do Demônio: A Ascensão",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/5E4nVa3dXTHG2zx9iO7b0UIMsa7.jpg",
+      "ano": 2023,
+      "sinopse": "Duas irmãs distantes cujo reencontro é interrompido por demônios devoradores de carne que aparecem de repente, levando-as a uma batalha primal pela sobrevivência, enfrentando a versão mais assustadora que se possa imaginar de uma família.",
+      "characters": ["Sam Raimi"],
+      "writer": ["Lee Cronin"],
+      "director": ["Lee Cronin"]
     },
     {
       "id": 2,
-      "name": "Filme 2",
-      "imgLink": "https://canvas.tubitv.com/08ea6038-ad60-4a74-84dd-d1ce53cdade8/-9llDV?w=408&h=583",
-      "ano": 1232
+      "name": "Jogos Mortais X",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/ch1BGjadaiPU59zYbb6zPUTZtyO.jpg",
+      "ano": 2023,
+      "sinopse": "Entre os eventos de “Jogos Mortais” e “Jogos Mortais II”, um doente e desesperado John Kramer viaja para o México para um arriscado e experimental procedimento médico na esperança de uma cura milagrosa para seu câncer — apenas para descobrir que toda a operação é uma farsa para fraudar os mais vulneráveis. Armado com um propósito recém-descoberto, o infame assassino em série retorna ao seu trabalho, virando a mesa contra os vigaristas em sua maneira visceral característica por meio de armadilhas tortuosas, perturbadas e engenhosas.",
+      "characters": ["Josh Stolberg", "Pete Goldfinger"],
+      "writer": [],
+      "director": ["Kevin Greutert"]
+    },
+    {
+      "id": 3,
+      "name": "A Freira 2",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/omV2IW2OlFTSw6Hih13hz6lFdvP.jpg",
+      "ano": 2023,
+      "sinopse": "Quatro anos após os acontecimentos na abadia de St. Carta, a Irmã Irene (Taissa Farmiga) regressa mais uma vez e depara-se com a força demoníaca de Valak, a Freira (Bonnie Aarons).",
+      "characters": ["Gary Dauberman", "James Wan"],
+      "writer": [],
+      "director": ["Michael Chaves"]
+    },
+    {
+      "id": 4,
+      "name": "Christine: O Carro Assassino",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/lQgflKBffMBXkOsM0PpLl2nWFyn.jpg",
+      "ano": 1983,
+      "sinopse": "Arnie Cunningham compra um Plymouth Fury 1958, que ele chama de Christine. Ele então desenvolve uma obsessão doentia pelo carro, para o desespero de seu amigo atleta, Dennis Guilder. Depois do valentão Buddy Repperton desfigurar Christine, o carro se restaura perfeitamente e começa a matar Buddy e seus amigos. Determinado a acabar com as mortes, Dennis e a namorada de Arnie, Leigh Cabot, decidem destruir Christine.",
+      "characters": [],
+      "writer": [],
+      "director": ["John Carpenter"]
+    },
+    {
+      "id": 5,
+      "name": "Fale Comigo",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/2ziF8Q7zpT5YJYd2hNnYaYHrxfN.jpg",
+      "ano": 2023,
+      "sinopse": "Quando um grupo de amigos descobre como conjurar espíritos usando uma antiga mão embalsamada, eles ficam viciados na nova emoção. Até que um deles vai longe demais e abre a porta para o mundo espiritual.",
+      "characters": [],
+      "writer": ["Danny Philippou", "Michael Philippou"],
+      "director": ["Danny Philippou", "Bill Hinzman"]
+    },
+    {
+      "id": 6,
+      "name": "A Freira",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/28vxo5DvV0nHWTbYQL8gN3hmuli.jpg",
+      "ano": 2018,
+      "sinopse": "Presa em um convento na Romênia, uma freira comete suicídio. Para investigar o caso, o Vaticano envia um padre assombrado e uma noviça prestes a se tornar freira. Arriscando suas vidas, a fé e até suas almas, os dois descobrem um segredo profano e se confrontam com uma força do mal que toma a forma de uma freira demoníaca e transforma o convento em um campo de batalha.",
+      "characters": [],
+      "writer": [],
+      "director": ["Corin Hardy"]
+    },
+    {
+      "id": 7,
+      "name": "It: A Coisa",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/uYxz0lIiNgErrPhQbSjUdwYxtFc.jpg",
+      "ano": 2017,
+      "sinopse": "Na cidade de Derry, no Maine, sete jovens se juntam para combater uma criatura sobrenatural que está assombrando a sua cidade por séculos. Chamado de Pennywise – O Palhaço Dançarino, a Coisa é um monstro de força absoluta que toma a forma dos medos mais horrorosos das pessoas. Ameaçados por seus piores pesadelos, a única maneira dos jovens amigos sobreviverem à Coisa é se continuarem juntos.",
+      "characters": [],
+      "writer": [],
+      "director": ["Andy Muschietti"]
+    },
+    {
+      "id": 8,
+      "name": "O Telefone Preto",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/yw6H4C64tjBWlyKFG1pzmq5zOQh.jpg",
+      "ano": 2022,
+      "sinopse": "Após ter sido raptado por um assassino de crianças e trancado numa cave à prova de som, Finney Shaw um menino de 13 anos começa a receber chamadas num telefone desligado das vítimas anteriores do assassino. E eles estão determinados a garantir que o que aconteceu com eles não aconteça com Finney.",
+      "characters": [],
+      "writer": [],
+      "director": ["Scott Derrickson"]
+    },
+    {
+      "id": 9,
+      "name": "Hereditário",
+      "imgLink": "https://www.themoviedb.org/t/p/w220_and_h330_face/ysdkXpoeDYLpgodiNGBW29S4o2U.jpg",
+      "ano": 2018,
+      "sinopse": "Após a morte da reclusa avó, a família Graham começa a desvendar algumas coisas. Mesmo após a partida da matriarca, ela permanece como se fosse uma sombra sobre a família, especialmente sobre a solitária neta adolescente, Charlie, por quem ela sempre manteve uma fascinação não usual. Com um crescente terror tomando conta da casa, a família explora lugares mais escuros para escapar do infeliz destino que herdaram.",
+      "characters": [],
+      "writer": ["Ari Aster"],
+      "director": ["Ari Aster"]
     }
+
   ]
 }

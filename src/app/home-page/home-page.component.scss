@@ -1,29 +1,70 @@
 #page{
+
   *{
     color: white;
   }
 
-  .row > * {
-    padding-left: 5px;
-    padding-right: 5px;
+  .title{
+    padding-top: 40px;
+    margin-bottom: 40px;
+
+    h2{
+      font-family: monospace;
+      font-size: 28px;
+    }
   }
 
-  .title{
-    margin: 40px 0;
+  section{
+    max-width: 1052px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
   }
 
   .box{
     cursor: pointer;
+    width: 180px;
 
     img{
       width: 100%;
+      border-radius: 10px 10px 0 0;
     }
   }
 
 
   input{
     width: 100%;
-    color: black;
+  }
+
+  .filter{
+    margin-bottom: 50px;
+  }
+
+  .container-custom{
+    display: flex;
+    justify-content: center;
+
+    aside{
+
+
+      .filter-options{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 14px 16px;
+        border: 1px solid #dbdbdb;
+        border-radius: 12px;
+        box-shadow: 1px 1px 3px #373737;
+        background-color: #040404;
+
+        h3{
+          color: white;
+        }
+      }
+    }
   }
 }
 
