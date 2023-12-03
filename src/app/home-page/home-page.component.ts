@@ -16,7 +16,6 @@ import { animate, style, transition, trigger } from '@angular/animations';
         style({opacity: 0}),
         animate('1s', style({opacity: 1}))
       ])
-
     ])
   ]
 })
@@ -25,9 +24,11 @@ export class HomePageComponent implements OnInit {
 
   movies: movies[];
 
-  movie: movies[];
-
   form: FormGroup;
+
+  showFilters: boolean = false;
+
+  showOrder: boolean = false;
 
   constructor(
     private moviesService: MoviesService,
@@ -39,23 +40,18 @@ export class HomePageComponent implements OnInit {
     })
   }
 
-
-
   ngOnInit(): void {
     this.getMovies();
 
     this.form.get("name")?.valueChanges
       .pipe(
         map(value => value.trim()),
-        filter(value => value.length > 1),
         debounceTime(200),
         distinctUntilChanged(),
-        tap(value => console.log(value))
       )
       .subscribe(value => {
-
-        if(value != ''){
-          this.filterMovies(value);
+        if(value){
+          this.movies = this.movies.filter(obj => obj.name.toLowerCase().includes(value.toLowerCase()))
         } else {
           this.getMovies();
         }
@@ -79,5 +75,13 @@ export class HomePageComponent implements OnInit {
 
   routerMovie(id: number) {
     this.router.navigateByUrl('movies/' + id);
+  }
+
+  toggleFilters() {
+    this.showFilters = !this.showFilters;
+  }
+
+  toggleOrder() {
+    this.showOrder = !this.showOrder;
   }
 }

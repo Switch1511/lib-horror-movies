@@ -1,9 +1,5 @@
 #page{
 
-  *{
-    color: white;
-  }
-
   .title{
     padding-top: 40px;
     margin-bottom: 40px;
@@ -11,57 +7,107 @@
     h2{
       font-family: monospace;
       font-size: 28px;
+      color: white;
     }
-  }
-
-  section{
-    max-width: 1052px;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .box{
-    cursor: pointer;
-    width: 180px;
-
-    img{
-      width: 100%;
-      border-radius: 10px 10px 0 0;
-    }
-  }
-
-
-  input{
-    width: 100%;
-  }
-
-  .filter{
-    margin-bottom: 50px;
   }
 
   .container-custom{
     display: flex;
     justify-content: center;
+    float: left;
 
     aside{
-
-
-      .filter-options{
-        width: 100%;
+      .filters{
+        width: 240px;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        align-items: center;
-        padding: 14px 16px;
-        border: 1px solid #dbdbdb;
-        border-radius: 12px;
-        box-shadow: 1px 1px 3px #373737;
-        background-color: #040404;
+        flex-wrap: wrap;
+        gap: 25px;
 
-        h3{
-          color: white;
+        .filter-search{
+          border-bottom: 1px solid white;
+
+          label{
+            color: white;
+            font-size: 20px;
+          }
+
+          .input{
+            display: flex;
+            padding: 14px 16px;
+            margin-top: 12px;
+            background-color: #040404;
+
+            input{
+              width: 100%;
+              border: none;
+              color: white;
+              background-color: #040404;
+
+              &:focus{
+                outline: none;
+              }
+            }
+          }
+
+
+        }
+
+        .filter-options{
+          width: 100%;
+          align-items: center;
+
+          border: 1px solid #dbdbdb;
+          border-radius: 12px;
+          box-shadow: 1px 1px 3px #373737;
+          background-color: #040404;
+
+          h3{
+
+            color: white;
+          }
+        }
+
+        .more-filters{
+          border-top: 1px solid #232323;
+        }
+      }
+    }
+
+    section{
+      max-width: 1052px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-left: 56px;
+
+      .movie{
+        background-color: #101010;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 1px 1px 6px #0a0a0a;
+
+        .box{
+          cursor: pointer;
+          width: 180px;
+
+          .box-info{
+            padding: 8px;
+            line-height: 21px;
+
+            h5, p{
+              color: white;
+            }
+
+            p{
+              font-family: monospace;
+            }
+          }
+
+          img{
+            width: 100%;
+          }
         }
       }
     }

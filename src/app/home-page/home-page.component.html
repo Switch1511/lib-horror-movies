@@ -4,42 +4,75 @@
   </div>
 
   <div class="container-custom">
-
     <aside>
-      <div style="width: 240px;       display: flex;
-      flex-wrap: wrap;
-      gap: 25px;">
-        <div class="filter-options">
-          <h3>Ordenar</h3>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
-              <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
-            </svg>
-          </span>
+      <form [formGroup]="form">
+        <div class="filters">
+
+          <div class="filter-search">
+            <label>Pesquisar</label>
+            <div class="input">
+              <input type="text" formControlName="name">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #FFFFFF;">
+                <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path>
+              </svg>
+            </div>
         </div>
 
-        <div class="filter-options">
-          <h3>Filtros</h3>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
-              <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
-            </svg>
-          </span>
+          <div class="filter-options">
+            <div style="cursor: pointer; padding: 14px 16px;" (click)="toggleOrder()">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3>Ordenar</h3>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-options">
+            <div style="cursor: pointer; padding: 14px 16px;" (click)="toggleFilters()">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3>Filtros</h3>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);">
+                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="more-filters" *ngIf="showFilters" style="width: 100%;">
+
+              <h3>Filtros</h3>
+
+            </div>
+
+          </div>
+
+          <div class="search">
+            <h2>Pesquisar</h2>
+          </div>
         </div>
-      </div>
+      </form>
     </aside>
     <div>
       <section>
-        <div *ngFor="let movie of movies">
-          <div class="box" (click)="routerMovie(movie.id)">
-            <div class="img-box">
+        <div class="movie" *ngFor="let movie of movies" (click)="routerMovie(movie.id)">
+          <div class="box">
+            <div class="box-img">
               <img [src]="movie.imgLink">
             </div>
-            <div>
+            <div class="box-info">
               <h5>{{movie.name}}</h5>
               <p>{{movie.ano}}</p>
             </div>
           </div>
+        </div>
+
+        <div *ngIf="!movies?.length">
+          <h2>Nenhum Filme Encontrado</h2>
         </div>
       </section>
     </div>
