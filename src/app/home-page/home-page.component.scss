@@ -55,20 +55,93 @@
         .filter-options{
           width: 100%;
           align-items: center;
-
           border: 1px solid #dbdbdb;
           border-radius: 12px;
           box-shadow: 1px 1px 3px #373737;
           background-color: #040404;
 
           h3{
-
             color: white;
+          }
+
+          .initial-rotation{
+            transition: transform 0.3s ease; /* Define a transição para a propriedade transform */
+            transform: rotate(0deg);
+          }
+
+          .rotated{
+            transition: transform 0.3s ease;
+            transform: rotate(90deg);
+          }
+
+          .more-filters{
+            border-top: 1px solid #232323;
+            padding: 14px 16px;
+
+            .custom-select {
+              position: relative;
+            }
+
+            select {
+              appearance: none;
+              -webkit-appearance: none;
+              width: 100%;
+              font-size: 14px;
+              padding: 8px 3em 8px 1em;
+              background-color: #fff;
+              border: 1px solid #caced1;
+              border-radius: 0.25rem;
+              color: #000;
+              cursor: pointer;
+
+              &:focus{
+                outline: none;
+              }
+            }
+
+            .custom-select::before,
+            .custom-select::after {
+              --size: 0.3rem;
+              content: "";
+              position: absolute;
+              right: 1rem;
+              pointer-events: none;
+            }
+
+            .custom-select::before {
+              border-left: var(--size) solid transparent;
+              border-right: var(--size) solid transparent;
+              border-bottom: var(--size) solid black;
+              top: 35%;
+            }
+
+            .custom-select::after {
+              border-left: var(--size) solid transparent;
+              border-right: var(--size) solid transparent;
+              border-top: var(--size) solid black;
+              top: 60%;
+            }
           }
         }
 
-        .more-filters{
-          border-top: 1px solid #232323;
+        .search{
+          width: 100%;
+          text-align: center;
+          padding: 18px;
+          border-radius: 12px;
+          color: white;
+          background: #000000;
+          font-size: 18px;
+          border: 1px solid white;
+          cursor: pointer;
+
+          &:hover{
+            background-color: #040404;
+          }
+
+          &:active{
+            background-color: #292929;
+          }
         }
       }
     }
@@ -77,7 +150,6 @@
       max-width: 1052px;
       width: 100%;
       display: flex;
-      justify-content: center;
       gap: 24px;
       flex-wrap: wrap;
       padding-left: 56px;

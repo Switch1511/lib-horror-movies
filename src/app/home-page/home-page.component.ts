@@ -23,6 +23,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class HomePageComponent implements OnInit {
 
   movies: movies[];
+  moviesCache: movies[];
 
   form: FormGroup;
 
@@ -30,13 +31,33 @@ export class HomePageComponent implements OnInit {
 
   showOrder: boolean = false;
 
+  optionsOrder = [
+    {
+      value: 'newRelease',
+      label: 'Lançamento (novo)'
+    },
+    {
+      value: 'oldRelease',
+      label: 'Lançamento (antigo)'
+    },
+    {
+      value: 'titleAZ',
+      label: 'Título (A-Z)'
+    },
+    {
+      value: 'titleZA',
+      label: 'Título (Z-A)'
+    },
+  ]
+
   constructor(
     private moviesService: MoviesService,
     private router: Router
   ) {
 
     this.form = new FormGroup({
-      name: new FormControl('')
+      name: new FormControl(),
+      order: new FormControl()
     })
   }
 
@@ -50,19 +71,63 @@ export class HomePageComponent implements OnInit {
         distinctUntilChanged(),
       )
       .subscribe(value => {
-        if(value){
-          this.movies = this.movies.filter(obj => obj.name.toLowerCase().includes(value.toLowerCase()))
-        } else {
-          this.getMovies();
-        }
+        this.movies = this.moviesCache.filter(obj => obj.name.toLowerCase().includes(value.toLowerCase()))
+        console.log( this.movies)
       })
+  }
+
+  search(){
+    let order = this.form.controls['order'].value;
+    this.resetName();
+    switch(order){
+      case 'newRelease': {
+        this.movies = this.moviesCache.sort((a, b) => {
+          return b.ano - a.ano;
+        });
+        break;
+      }
+
+      case 'oldRelease': {
+        this.movies = this.moviesCache.sort((a, b) => {
+          return a.ano - b.ano;
+        });
+        break;
+      }
+
+      case 'titleAZ': {
+        this.movies = this.moviesCache.sort((a, b) => {
+          return a.name.localeCompare(b.name);
+        });
+        break;
+      }
+
+      case 'titleZA': {
+        this.movies = this.moviesCache.sort((a, b) => {
+          return b.name.localeCompare(a.name);
+        });
+        break;
+      }
+
+      case 'null': {
+        this.getMovies();
+        break;
+      }
+    }
+
+
+
+
+  }
+
+  resetName(){
+    this.form.controls['name'].setValue('');
   }
 
   getMovies() {
     this.moviesService.getMovies()
     .subscribe((data: any) => {
       this.movies = data;
-
+      this.moviesCache = this.movies;
     });
   }
 
@@ -83,5 +148,6 @@ export class HomePageComponent implements OnInit {
 
   toggleOrder() {
     this.showOrder = !this.showOrder;
+    this.form.controls['order'].setValue(null);
   }
 }
