@@ -1,0 +1,20 @@
+.toggle-group{
+
+  .mat-button-toggle-standalone, .mat-button-toggle-group {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .mat-button-toggle{
+    width: 50%;
+  }
+
+  .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle{
+    border: none;
+  }
+
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border: 1px solid #555555;
+}
+}
