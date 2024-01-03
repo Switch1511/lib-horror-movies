@@ -6,6 +6,8 @@ import { HomePageComponent } from './home-page.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 @NgModule({
   declarations: [
     HomePageComponent
@@ -13,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonToggleModule
   ]
 })
 export class HomePageModule { }

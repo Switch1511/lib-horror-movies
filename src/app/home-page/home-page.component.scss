@@ -25,6 +25,7 @@
 
         .filter-search{
           border-bottom: 1px solid white;
+          width: 100%;
 
           label{
             color: white;
@@ -61,6 +62,7 @@
           background-color: #040404;
 
           h3{
+            margin: 0;
             color: white;
           }
 
@@ -127,7 +129,7 @@
         .search{
           width: 100%;
           text-align: center;
-          padding: 18px;
+          padding: 12px 18px;
           border-radius: 12px;
           color: white;
           background: #000000;
@@ -141,6 +143,10 @@
 
           &:active{
             background-color: #292929;
+          }
+
+          h2{
+            margin: 0;
           }
         }
       }

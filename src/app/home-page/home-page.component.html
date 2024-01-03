@@ -53,7 +53,17 @@
 
             <div class="more-filters" *ngIf="showFilters" style="width: 100%;">
 
-              <h3>Filtros</h3>
+              <div class="toggle-group">
+                <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple>
+                  <mat-button-toggle value="slasher">Slasher</mat-button-toggle>
+                  <mat-button-toggle value="suspense">Suspense</mat-button-toggle>
+                  <mat-button-toggle value="acao">Ação</mat-button-toggle>
+                  <mat-button-toggle value="sobrenatural">Sobrenatural</mat-button-toggle>
+                  <mat-button-toggle value="comedia">Comédia</mat-button-toggle>
+                  <mat-button-toggle value="misterio">Mistério</mat-button-toggle>
+                  <mat-button-toggle value="gore">Gore</mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
 
             </div>
 
